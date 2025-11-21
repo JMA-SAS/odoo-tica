@@ -1,0 +1,16 @@
+{
+    'name': 'Restrict Negative Stock',
+    'version': '17.0.1.0.1',
+    'summary': 'Prevents negative stock with per-product, category, and location exceptions',
+    'author': 'Mudassir Amin',
+    'website': 'https://mudassir.odoo',
+    'category': 'Inventory',
+    'depends': ['stock'],
+    'data': [
+        'views/product_views.xml',
+        'views/product_category_views.xml',
+        'views/stock_location_views.xml',
+    ],
+    'installable': True,
+    'application': False,
+}
