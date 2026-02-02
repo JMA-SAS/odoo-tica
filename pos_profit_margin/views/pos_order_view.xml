@@ -1,0 +1,30 @@
+<odoo>
+    <record id="view_pos_order_form_profit" model="ir.ui.view">
+        <field name="name">pos.order.form.profit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_pos_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='order_total']" position="inside">
+                <field name="cost_total" readonly="1"/>
+                <field name="profit_total" readonly="1"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_pos_order_tree_profit" model="ir.ui.view">
+        <field name="name">pos.order.tree.profit</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="cost_total" optional="show"/>
+                <field name="profit_total" optional="show"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

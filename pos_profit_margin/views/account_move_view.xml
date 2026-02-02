@@ -1,0 +1,16 @@
+<odoo>
+    <record id="view_account_move_form_profit" model="ir.ui.view">
+        <field name="name">account.move.form.pos.profit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='tax_totals']" position="after">
+                <group>
+                    <field name="pos_profit_total" readonly="1"/>
+                </group>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
